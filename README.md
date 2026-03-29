@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-green)](package.json)
 
 OpenClaw 插件，用于记录所有 LLM API 请求和响应，方便调试、审计和分析。
+想知道为什么每次对话消耗的上下文Tokens为什么那么大？调用大模型API时OpenClaw具体“说了”些什么，可以安装这个插件试试。
 
 ## 功能特性
 
