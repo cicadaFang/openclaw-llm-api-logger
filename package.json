@@ -1,0 +1,14 @@
+{
+  "name": "@openclaw/llm-api-logger",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin that logs all LLM API request/response payloads",
+  "type": "module",
+  "main": "index.ts",
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}

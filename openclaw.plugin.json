@@ -1,0 +1,65 @@
+{
+  "id": "llm-api-logger",
+  "name": "LLM API Logger",
+  "description": "Logs all LLM API request/response payloads for debugging and auditing",
+  "version": "1.0.0",
+  "hooks": ["llm_input", "llm_output"],
+  "uiHints": {
+    "enabled": {
+      "label": "Enable Logging",
+      "help": "Enable/disable LLM API logging"
+    },
+    "logPath": {
+      "label": "Log Directory",
+      "placeholder": "~/.openclaw/logs/llm-api",
+      "help": "Directory for log files"
+    },
+    "maxFileSizeMb": {
+      "label": "Max File Size (MB)",
+      "placeholder": "10",
+      "help": "Max log file size before rotation"
+    },
+    "maxFiles": {
+      "label": "Max Files",
+      "placeholder": "10",
+      "help": "Max number of rotated files to keep"
+    },
+    "redactApiKey": {
+      "label": "Redact API Keys",
+      "help": "Redact API keys and sensitive tokens in logs (recommended)"
+    },
+    "prettyPrint": {
+      "label": "Pretty Print",
+      "help": "Pretty print JSON for readability (larger files)"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "logPath": {
+        "type": "string"
+      },
+      "maxFileSizeMb": {
+        "type": "number",
+        "default": 10
+      },
+      "maxFiles": {
+        "type": "number",
+        "default": 10
+      },
+      "redactApiKey": {
+        "type": "boolean",
+        "default": true
+      },
+      "prettyPrint": {
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }
+}
